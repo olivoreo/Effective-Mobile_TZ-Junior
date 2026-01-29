@@ -52,7 +52,7 @@ src/
 
 ```bash
 git clone https://github.com/olivoreo/Effective-Mobile_TZ-Junior.git
-cd user-service  
+cd Effective-Mobile_TZ-Junior  
 ```
 
 ---
