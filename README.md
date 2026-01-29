@@ -51,7 +51,7 @@ src/
 ### 1. Клонирование репозитория
 
 ```bash
-git clone https://github.com/olivoreo/user-service.git  
+git clone https://github.com/olivoreo/Effective-Mobile_TZ-Junior.git
 cd user-service  
 ```
 
@@ -65,7 +65,23 @@ npm install
 
 ---
 
-### 3. Запуск MongoDB
+### 3. Настройка переменных окружения
+
+В корне проекта создайте файл .env на основе примера:
+
+```bash
+cp .env.example .env
+```
+
+И укажите в нём JWT secret:
+
+```bash
+JWT_SECRET=your_secret_key
+```
+
+---
+
+### 4. Запуск MongoDB
 
 Убедитесь, что MongoDB запущен локально на порту 27017.
 
@@ -77,7 +93,7 @@ mongodb://localhost:27017/users_db
 
 ---
 
-### 4. Запуск проекта в режиме разработки
+### 5. Запуск проекта в режиме разработки
 
 ```bash
 npm run dev
@@ -85,7 +101,7 @@ npm run dev
 
 ---
 
-### 5. Production сборка
+### 6. Production сборка
 
 ```bash
 npm run build  
