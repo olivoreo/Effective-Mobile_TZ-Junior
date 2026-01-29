@@ -4,7 +4,7 @@ import { User } from "../models/User";
 import { generateToken } from "../utils/jwt";
 import { AuthRequest } from "../middlewares/auth.middleware";
 
-// 1. Registration
+// 1. Регистрация
 export const register = async (req: Request, res: Response) => {
     const { fullName, birthDate, email, password } = req.body;
 
@@ -25,7 +25,7 @@ export const register = async (req: Request, res: Response) => {
     res.status(201).json(user);
 };
 
-// 2. Login
+// 2. Логин
 export const login = async (req: Request, res: Response) => {
     const { email, password } = req.body;
 
@@ -52,7 +52,7 @@ export const login = async (req: Request, res: Response) => {
     res.json({ token });
 };
 
-// 3. Get user by id
+// 3. Получить пользователя по ID
 export const getUserById = async (req: AuthRequest, res: Response) => {
     const { id } = req.params;
 
@@ -69,13 +69,13 @@ export const getUserById = async (req: AuthRequest, res: Response) => {
     res.json(user);
 };
 
-// 4. Get all users (admin)
+// 4. Получить всех пользователей (только для admin)
 export const getAllUsers = async (req: Request, res: Response) => {
     const users = await User.find().select("-password");
     res.json(users);
 };
 
-// 5. Block user
+// 5. Блокировка пользователя
 export const blockUser = async (req: AuthRequest, res: Response) => {
     const { id } = req.params;
 
